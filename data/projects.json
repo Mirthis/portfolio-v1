@@ -1,12 +1,15 @@
 [
   {
-    "name": "property",
+    "id": "property",
     "imageName": "property.jpg",
-    "title": "Property Finder",
+    "name": "Property Finder",
+    "type": "ReactJS",
     "subTitle": "React JS / Tailwind / Firebase",
     "description": "bla bla bla bla bla bla bla",
     "demoUrl": "https://www.google.com",
     "codeUrl": "http://www.google.com",
-    "technologies": ["React", "Javascript", "NextJs"]
+    "technologies": ["React", "Javascript", "NextJs"],
+    "imgHeight": 2000,
+    "imgWidth": 1390
   }
 ]

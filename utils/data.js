@@ -1,9 +1,13 @@
 import data from '../data/projects.json';
 
-export const getProjectData = (projectName) => {
-  return data.find((p) => p.name === projectName);
+export const getProjects = () => {
+  return data;
 };
 
-export const getProjectsNameList = () => {
-  return data.map((p) => p.name);
+export const getProjectData = (projectId) => {
+  return data.find((p) => p.id === projectId);
+};
+
+export const getProjectsIdList = () => {
+  return data.map((p) => p.id);
 };

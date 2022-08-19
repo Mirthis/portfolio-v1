@@ -27,7 +27,7 @@ const ContactIcons = ({ size = 'normal' }) => {
     },
   ];
 
-  let classNames = `rounded-full shadow-lg shadow-gray-400 cursor-pointer  ease-in duration-300 ${
+  let classNames = `rounded-full shadow-lg shadow-gray-400 cursor-pointer ease-in duration-300 ${
     size === 'normal' ? ' hover:scale-110 p-6' : ' hover:scale-105 p-3'
   }`;
 

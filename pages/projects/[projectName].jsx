@@ -3,8 +3,7 @@ import React from 'react';
 import { RiRadioButtonFill } from 'react-icons/ri';
 import Link from 'next/link';
 import { getProjectData, getProjectsNameList } from '../../utils/data';
-
-const IMAGE_PATH = '/../public/assets/projects/';
+import { IMAGE_PATH } from '../../utils/constants';
 
 const Project = ({ projectData }) => {
   return (
@@ -19,7 +18,7 @@ const Project = ({ projectData }) => {
           alt="property"
         />
         <div className="absolute top-[70%] max-w-[1240px] w-full left-[50%] right-[50%] translate-x-[-50%] translate-y-[-50%] text-white z-10 p-2">
-          <h2 className="py-2">{projectData.title}</h2>
+          <h2 className="py-2">{projectData.name}</h2>
           <h3>{projectData.subTitle}</h3>
         </div>
       </div>
@@ -61,8 +60,8 @@ const Project = ({ projectData }) => {
 };
 
 export async function getStaticPaths() {
-  const list = getProjectsNameList();
-  const paths = list.map((l) => ({ params: { projectName: l } }));
+  const list = getProjectsIdList();
+  const paths = list.map((l) => ({ params: { projectId: l } }));
   return {
     paths: paths,
     fallback: false, // can also be true or 'blocking'
@@ -70,7 +69,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps(context) {
-  const projectData = getProjectData(context.params.projectName);
+  const projectData = getProjectData(context.params.projectId);
   return {
     props: {
       projectData,
