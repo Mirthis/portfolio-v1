@@ -10,10 +10,18 @@ export const Skills = () => {
           <SkillItem skillName="HTML" />
           <SkillItem skillName="CSS" />
           <SkillItem skillName="Javascript" />
+          <SkillItem skillName="Typescript" />
           <SkillItem skillName="React" />
-          <SkillItem skillName="Tailwind" />
           <SkillItem skillName="NextJS" />
           <SkillItem skillName="Node" />
+          <SkillItem skillName="Tailwind" />
+          <SkillItem skillName="Material-UI" />
+          <SkillItem skillName="PostgreSQL" />
+          <SkillItem skillName="MongoDB" />
+          <SkillItem skillName="GraphQL" />
+          <SkillItem skillName="Solidity" />
+          <SkillItem skillName="Hardhat" />
+          <SkillItem skillName="Docker" />
           <SkillItem skillName="Github" />
         </div>
       </div>

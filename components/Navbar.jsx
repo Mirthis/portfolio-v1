@@ -1,8 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { AiOutlineClose, AiOutlineMenu, AiOutlineMail } from 'react-icons/ai';
-import { FaLinkedinIn, FaGithub } from 'react-icons/fa';
-import { BsFillPersonLinesFill } from 'react-icons/bs';
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import ContactIcons from './ContactIcons';
@@ -10,28 +8,35 @@ import ContactIcons from './ContactIcons';
 const Navbar = () => {
   const [nav, setNav] = useState(false);
   const [shadow, setShadow] = useState(false);
-  const [navBg, setNavBg] = useState('#ecf0f3');
-  const [linkColor, setLinkColor] = useState('#1f2937');
+  const [navBg, setNavBg] = useState('bg-slate-900');
+  const [linkColor, setLinkColor] = useState('text-slate-400');
 
   const router = useRouter();
 
-  useEffect(() => {
-    // TODO:create dynamic root for project
-    if (router.asPath === '/property') {
-      setNavBg('transparent');
-      setLinkColor('#ecf0f3');
+  const setTransparentNavBar = (transparent) => {
+    if (transparent) {
+      setNavBg('bg-transparent');
+      setLinkColor('text-slate-400');
     } else {
-      setNavBg('#ecf0f3');
-      setLinkColor('#1f2937');
+      setNavBg('bg-slate-900');
+      setLinkColor('text-slate-400');
     }
+  };
+
+  useEffect(() => {
+    setTransparentNavBar(router.asPath.startsWith('/project'));
   }, [router]);
 
   useEffect(() => {
     const handleShadow = () => {
       if (window.scrollY >= 90) {
         setShadow(true);
+        setTransparentNavBar(false);
       } else {
         setShadow(false);
+        if (router.asPath.startsWith('/project')) {
+          setTransparentNavBar(true);
+        }
       }
     };
     window.addEventListener('scroll', handleShadow);
@@ -49,39 +54,45 @@ const Navbar = () => {
     <div
       className={`${
         shadow
-          ? 'fixed w-full h-20 shadow-xl z-[100]'
+          ? 'fixed w-full h-20 shadow-md shadow-black z-[100]'
           : 'fixed w-full h-20 z-[100]'
-      }  bg-[${navBg}]`}
+      }  ${navBg}`}
     >
-      <div className="flex justify-between items-center w-full h-full px-2 2xl:px-16">
+      <div className="flex justify-between items-center max-w-[1240px] h-full px-2 2xl:px-16 mx-auto">
         <Link href="/">
           <a>
             <Image
-              src="/../public/assets/navLogo.png"
+              src="/assets/navLogo.png"
               alt="logo"
-              width="125"
+              width="71"
               height="50"
             />
           </a>
         </Link>
         <div>
-          <ul style={{ color: `${linkColor}` }} className="hidden md:flex">
+          <ul className={`hidden md:flex ${linkColor}`}>
             <Link href="/">
-              <li className="ml-10 text-sm uppercase hover:border-b">Home</li>
+              <li className="ml-10 text-sm uppercase hover:border-b border-slate-400">
+                Home
+              </li>
             </Link>
             <Link href="/#about">
-              <li className="ml-10 text-sm uppercase hover:border-b">About</li>
+              <li className="ml-10 text-sm uppercase hover:border-b border-slate-400">
+                About
+              </li>
             </Link>
             <Link href="/#skills">
-              <li className="ml-10 text-sm uppercase hover:border-b">Skills</li>
+              <li className="ml-10 text-sm uppercase hover:border-b border-slate-400">
+                Skills
+              </li>
             </Link>
             <Link href="/#projects">
-              <li className="ml-10 text-sm uppercase hover:border-b">
+              <li className="ml-10 text-sm uppercase hover:border-b border-slate-400">
                 Projects
               </li>
             </Link>
             <Link href="/#contact">
-              <li className="ml-10 text-sm uppercase hover:border-b">
+              <li className="ml-10 text-sm uppercase hover:border-b border-slate-400">
                 Contact
               </li>
             </Link>
@@ -98,7 +109,7 @@ const Navbar = () => {
         <div
           className={
             nav
-              ? 'fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-[#ecf0f3] p-10 ease-in duration-500'
+              ? 'fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-slate-900 p-10 ease-in duration-500'
               : 'fixed left-[-100%] top-0 p-10 ease-in duration-500'
           }
         >
@@ -107,23 +118,23 @@ const Navbar = () => {
               <Link href="/" passHref>
                 <a>
                   <Image
-                    src="/../public/assets/navLogo.png"
+                    src="/assets/navLogo.png"
                     alt="logo"
-                    width="87"
-                    height="35"
+                    width="64"
+                    height="45"
                   />
                 </a>
               </Link>
               <div
                 onClick={hideNavBar}
-                className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer"
+                className="rounded-full shadow-lg shadow-black p-3 cursor-pointer"
               >
                 <AiOutlineClose />
               </div>
             </div>
-            <div className="border-b border-gray-300 my-4 ">
+            <div className="border-b border-slate-400 my-4 ">
               <p className="w-[85%] md:w-[90%] py-4">
-                Let&apos;s build something legendary together
+                Let&apos;s build something together
               </p>
             </div>
           </div>
@@ -156,7 +167,7 @@ const Navbar = () => {
               </Link>
             </ul>
             <div className="pt-40">
-              <p className="uppercase tracking-widest text-[#5651e5]">
+              <p className="uppercase tracking-widest text-sky-400">
                 Let&apos;s connect
               </p>
               <div className="flex items-center justify-between my-4 w-full sm:w-[80%] ">

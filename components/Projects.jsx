@@ -20,8 +20,8 @@ export const Projects = () => {
               name={p.name}
               backgroundImage={p.imageName}
               type={p.type}
-              url={`/${p.id}`}
-              imgHeight={p.imgHeigth || DEFAULT_PROJECT_LIST_IMAGE_HEIGHT}
+              id={`${p.id}`}
+              imgHeight={p.imgHeight || DEFAULT_PROJECT_LIST_IMAGE_HEIGHT}
               imgWidth={p.imgWidth || DEFAULT_PROJECT_LIST_IMAGE_WIDTH}
             />
           ))}
