@@ -12,7 +12,7 @@ export const About = () => {
           <p className="py-2 ">
             I built my first website with one of those horrible WYSISWYG tools
             in the web 1.0 era and later realized when I took a computer science
-            degree how much I loved coding. I built and amanged few community
+            degree how much I loved coding. I built and manged few community
             sites since then, but eventually ended up in a less technical
             career.
           </p>

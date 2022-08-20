@@ -16,7 +16,7 @@ const Navbar = () => {
   const setTransparentNavBar = (transparent) => {
     if (transparent) {
       setNavBg('bg-transparent');
-      setLinkColor('text-slate-400');
+      setLinkColor('text-sky-400');
     } else {
       setNavBg('bg-slate-900');
       setLinkColor('text-slate-400');
@@ -24,7 +24,7 @@ const Navbar = () => {
   };
 
   useEffect(() => {
-    setTransparentNavBar(router.asPath.startsWith('/project'));
+    setTransparentNavBar(router.asPath.startsWith('/projects'));
   }, [router]);
 
   useEffect(() => {
@@ -34,13 +34,13 @@ const Navbar = () => {
         setTransparentNavBar(false);
       } else {
         setShadow(false);
-        if (router.asPath.startsWith('/project')) {
+        if (router.asPath.startsWith('/projects')) {
           setTransparentNavBar(true);
         }
       }
     };
     window.addEventListener('scroll', handleShadow);
-  }, []);
+  }, [router]);
 
   const showNavBar = () => {
     setNav(true);

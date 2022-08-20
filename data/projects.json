@@ -57,7 +57,7 @@
     "id": "portfolio",
     "imageName": "portfolio.jpg",
     "name": "Personal Portfolio",
-    "type": "Next Js",
+    "type": "Next JS",
     "subTitle": "Next JS / React JS",
     "description": {
       "overview": ["This is the site you're currently browsing :)"],
