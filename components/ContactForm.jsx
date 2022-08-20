@@ -136,7 +136,7 @@ const ContactForm = () => {
       )}
       {formSubmitted && (
         <div className="text-center mt-2 text-[#5651e5]">
-          <p>Thanks for contacting me. I&apos;'ll be in touch soon.</p>
+          <p>Thanks for contacting me. I&apos;ll be in touch soon.</p>
         </div>
       )}
     </form>
