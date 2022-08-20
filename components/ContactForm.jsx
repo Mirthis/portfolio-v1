@@ -5,9 +5,8 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import * as Yup from 'yup';
 
 const ContactForm = () => {
-  const [reCaptchaPassed, setRecaptchaPassed] = useState(false);
+  const [reCaptchaValue, setRecaptchaValue] = useState(undefined);
   const [formSubmitted, setFormSubmitted] = useState(false);
-  const [hideElement, setHideElement] = useState(false);
 
   const validationSchema = Yup.object().shape({
     name: Yup.string()
@@ -17,7 +16,7 @@ const ContactForm = () => {
     subject: Yup.string()
       .required('Subject is required')
       .max(100, 'Subject must be less than 100 character'),
-    message: Yup.string().required('M essage is required'),
+    message: Yup.string().required('Message is required'),
   });
 
   const {
@@ -31,24 +30,21 @@ const ContactForm = () => {
   });
 
   const onChange = (value) => {
-    setRecaptchaPassed(!!value);
+    if (value) {
+      setRecaptchaValue(value);
+    }
   };
 
   const submitForm = async (data) => {
-    console.log('data');
-    console.log(data);
-
-    console.log('reCaptchaPassed');
-    console.log(reCaptchaPassed);
-
     const { email, name, subject, message } = data;
     try {
-      const res = await fetch('/api/email-sendgrid', {
+      const res = await fetch('/api/contact', {
         body: JSON.stringify({
           email,
           name,
           subject,
           message,
+          recaptcha: reCaptchaValue,
         }),
         headers: {
           'Content-Type': 'application/json',
@@ -56,24 +52,15 @@ const ContactForm = () => {
         method: 'POST',
       });
 
-      console.log('res');
-      console.log(res);
       if (!res.ok) {
         throw new Error();
       }
       setFormSubmitted(true);
-      console.log('Succesfully submitted!');
     } catch (err) {
       console.error(err);
       return;
     }
   };
-
-  console.log('isDirty');
-  console.log(isDirty);
-
-  console.log('isValid');
-  console.log(isValid);
 
   return (
     <form onSubmit={handleSubmit(submitForm)} noValidate>
@@ -81,7 +68,7 @@ const ContactForm = () => {
         <label className="uppercase text-sm py-2">Name</label>
         <input
           disabled={formSubmitted}
-          className="border-2 rounded-lg p-3 flex border-gray-300"
+          className="border-2 rounded-lg p-3 flex border-slate-600 bg-slate-900"
           type="text"
           {...register('name')}
         />
@@ -91,7 +78,7 @@ const ContactForm = () => {
         <label className="uppercase text-sm py-2">Email</label>
         <input
           disabled={formSubmitted}
-          className="border-2 rounded-lg p-3 flex border-gray-300"
+          className="border-2 rounded-lg p-3 flex border-slate-600 bg-slate-900"
           {...register('email')}
           type="email"
         />
@@ -101,7 +88,7 @@ const ContactForm = () => {
         <label className="uppercase text-sm py-2">Subject</label>
         <input
           disabled={formSubmitted}
-          className="border-2 rounded-lg p-3 flex border-gray-300"
+          className="border-2 rounded-lg p-3 flex border-slate-600 bg-slate-900"
           type="text"
           {...register('subject')}
         />
@@ -112,7 +99,7 @@ const ContactForm = () => {
         <textarea
           disabled={formSubmitted}
           {...register('message')}
-          className="border-2 rounded-lg p-3 border-gray-300"
+          className="border-2 rounded-lg p-3 border-slate-600 bg-slate-900"
           rows="10"
         ></textarea>
         <p className="mt-1 text-red-500">{errors.message?.message}</p>
@@ -123,11 +110,12 @@ const ContactForm = () => {
             <ReCAPTCHA
               sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
               onChange={onChange}
+              theme="dark"
             />
           </div>
 
           <button
-            disabled={!isDirty || !isValid || !reCaptchaPassed}
+            disabled={!isDirty || !isValid || !reCaptchaValue}
             className="w-full p-4 text-gray-100 mt-4"
           >
             Send Message
@@ -136,7 +124,7 @@ const ContactForm = () => {
       )}
       {formSubmitted && (
         <div className="text-center mt-2 text-[#5651e5]">
-          <p>Thanks for contacting me. I&apos;'ll be in touch soon.</p>
+          <p>Thanks for contacting me. I&apos;ll be in touch soon.</p>
         </div>
       )}
     </form>

@@ -1,41 +1,47 @@
+import Link from 'next/link';
 import React from 'react';
 import { AiOutlineMail } from 'react-icons/ai';
-import { BsFillPersonLinesFill } from 'react-icons/bs';
-import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
+import { FaGithub, FaLinkedinIn, FaTwitter } from 'react-icons/fa';
 
 const ContactIcons = ({ size = 'normal' }) => {
   const iconList = [
     {
-      name: 'LinkedIn',
-      icon: <FaLinkedinIn />,
-      url: 'https://aaaa',
-    },
-    {
       name: 'GitHub',
       icon: <FaGithub />,
-      url: 'https://aaaa',
+      url: 'https://github.com/Mirthis',
+    },
+    {
+      name: 'LinkedIn',
+      icon: <FaLinkedinIn />,
+      url: 'https://www.linkedin.com/in/andrea-cardinale-fullstack/',
+    },
+    {
+      name: 'Twitter',
+      icon: <FaTwitter />,
+      url: 'https://twitter.com/Mirthis',
     },
     {
       name: 'Mail',
       icon: <AiOutlineMail />,
-      url: 'https://aaaa',
-    },
-    {
-      name: 'Person',
-      icon: <BsFillPersonLinesFill />,
-      url: 'https://aaaa',
+      url: '/#contact',
+      internal: true,
     },
   ];
 
-  let classNames = `rounded-full shadow-lg shadow-gray-400 cursor-pointer ease-in duration-300 ${
+  let classNames = `rounded-full cursor-pointer ease-in duration-300 ${
     size === 'normal' ? ' hover:scale-110 p-6' : ' hover:scale-105 p-3'
   }`;
 
   return (
     <>
       {iconList.map((icon) => (
-        <div key={icon.name} className={classNames}>
-          {icon.icon}
+        <div
+          key={icon.name}
+          className="rounded-full cursor-pointer ease-in duration-300 hover:scale-105 p-3 shadow-md shadow-black"
+        >
+          <Link href={icon.url}>
+            <a target={icon.internal ? '' : '_blank'}>{icon.icon}</a>
+          </Link>
         </div>
       ))}
     </>

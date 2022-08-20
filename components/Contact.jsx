@@ -14,7 +14,7 @@ const Contact = () => {
         <SectionHeader title="Contact" tagline="Get in Touch" />
         <div className="grid lg:grid-cols-5 gap-8">
           {/* left */}
-          <div className="col-span-3 lg:col-span-2 w-full h-full shadow-xl shadow-gray-400 rounded-xl p-4">
+          <div className="col-span-3 lg:col-span-2 w-full h-full shadow-md shadow-black rounded-xl p-4">
             <div className="lg:p-4 h-full">
               <div>
                 <Image
@@ -27,8 +27,8 @@ const Contact = () => {
                 <h2 className="py-2">Andrea Cardinale</h2>
                 <p>Full-stack web engineer</p>
                 <p className="py-4">
-                  I am available for freelance or full-time positions. Contact
-                  me and let&apos;talk
+                  Contact me and let&apos;s talk about how to turn your next
+                  project into reality.
                 </p>
               </div>
               <div>
@@ -41,7 +41,7 @@ const Contact = () => {
           </div>
 
           {/* right */}
-          <div className="col-span-3 w-full h-auto shadow-xl shadow-gray-400 rounded-xl lg:p-4">
+          <div className="col-span-3 w-full h-auto shadow-md shadow-black rounded-xl lg:p-4">
             <div className="p-4">
               <ContactForm />
             </div>
@@ -49,9 +49,9 @@ const Contact = () => {
         </div>
         <div className="flex justify-center py-12">
           <Link href="/ ">
-            <div className="rounded-full shadow-lg shadow-gray-400 p-4 cursor-pointer hover:scale-110 ease-in duration-300">
+            <div className="rounded-full shadow-md shadow-black p-4 cursor-pointer hover:scale-110 ease-in duration-300">
               <HiOutlineChevronDoubleUp
-                className="m-auto text-[#5651e5]"
+                className="m-auto text-sky-400"
                 size={30}
               />
             </div>

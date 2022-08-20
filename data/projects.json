@@ -1,15 +1,83 @@
 [
   {
-    "id": "property",
-    "imageName": "property.jpg",
-    "name": "Property Finder",
-    "type": "ReactJS",
-    "subTitle": "React JS / Tailwind / Firebase",
-    "description": "bla bla bla bla bla bla bla",
-    "demoUrl": "https://www.google.com",
-    "codeUrl": "http://www.google.com",
-    "technologies": ["React", "Javascript", "NextJs"],
-    "imgHeight": 2000,
-    "imgWidth": 1390
+    "id": "perfi",
+    "imageName": "perfi.jpg",
+    "name": "Perfi - Personal Finance",
+    "type": "React JS",
+    "subTitle": "React JS / Express JS",
+    "description": {
+      "overview": [
+        "Perfi is a personal finance app that leverage open banking to retrieve transactions data from financial institution accounts, and provide spending stats.",
+        "This is my first complex full stack project and required me to learn many new concetps along the way while dealing with disparate challenges.",
+        "The app currently have most of the basic featres and it's available to browse in demo mode."
+      ],
+      "features": [
+        "Connect to major financial institutions (UK only for now)",
+        "Retrieve accounts data and display basic stats (balance, spending)",
+        "Retrieve transactions for each account and assign them to pre-defined categories",
+        "List transactions by category, month, account",
+        "Display aggragated view of spending data using charts",
+        "Exclusion/inclusion of individual transactions from spending view",
+        "Exclusion/inclusion of all transactions in a specific category from spending view",
+        "Assignment of transactions to a category",
+        "Auto assignment of similar transactions to a category",
+        "Category assignment algorithm adapts to user past choices",
+        "User defined categories",
+        "Email/password authentication",
+        "Financial accounts permission management (renew, add accounts, remove accounts)",
+        "Dark/Ligh theme",
+        "Fully responsive layout"
+      ],
+      "techFeatures": [
+        "Typescript for both ExpressJS back-end and ReactJS front-end",
+        "PassportJS for user authentication and integration with Express session management",
+        "Open banking integration using Plaid (3rd party service)",
+        "Database migration, seeding and querying via Sequelize",
+        "State management using a conmbination of useState, Redux, and useContext",
+        "Data fetching, caching and mutation via RTK Query",
+        "Charts implemented with ReCharts",
+        "Styling and UI components from Material-UI"
+      ]
+    },
+    "demoUrl": "https://perfi-app.herokuapp.com/",
+    "codeUrl": "https://github.com/Mirthis/perfi",
+    "technologies": [
+      "Typescript",
+      "React JS",
+      "Express JS",
+      "Material UI",
+      "Redux Toolkit",
+      "Recharts",
+      "PostgreSQL"
+    ],
+    "imgWidth": 1507,
+    "imgHeight": 1080
+  },
+  {
+    "id": "portfolio",
+    "imageName": "portfolio.jpg",
+    "name": "Personal Portfolio",
+    "type": "Next Js",
+    "subTitle": "Next JS / React JS",
+    "description": {
+      "overview": ["This is the site you're currently browsing :)"],
+      "features": [
+        "About",
+        "List of skiils",
+        "List of projects with detailed page",
+        "Contact links and form",
+        "Fully responsive layout"
+      ],
+      "techFeatures": [
+        "NextJS dynamic routing for project pages",
+        "Fully styled with Tailwind CSS",
+        "Server side rendering",
+        "Client and server side recaptcha validation"
+      ]
+    },
+    "codeUrl": "https://github.com/Mirthis/portfolio",
+    "technologies": ["NextJs", "Tailwind CSS"],
+    "imgWidth": 1292,
+    "imgHeight": 929
   }
 ]
