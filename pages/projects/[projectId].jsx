@@ -9,7 +9,7 @@ const Project = ({ projectData }) => {
   return (
     <div className="w-full">
       <div className="w-full h-[30vh] lg:h-[40vh] relative">
-        <div className="absolute top-0 left-0 w-full h-[30vh] lg:h-[40vh] bg-slate-500/50 z-10" />
+        <div className="absolute top-0 left-0 w-full h-[30vh] lg:h-[40vh] bg-slate-800/80 z-10" />
         <Image
           className="absolute z-1"
           layout="fill"
@@ -54,18 +54,18 @@ const Project = ({ projectData }) => {
             </>
           )}
           {projectData.demoUrl && (
-            <button className="px-8 py-2 mt-4 mr-8">
-              <Link href={projectData.demoUrl}>
-                <a target="_blank">Demo</a>
-              </Link>
-            </button>
+            <Link href={projectData.demoUrl}>
+              <a target="_blank">
+                <button className="px-8 py-2 mt-4 mr-8">Demo</button>
+              </a>
+            </Link>
           )}
           {projectData.codeUrl && (
-            <button className="px-8 py-2 mt-4">
-              <Link href={projectData.codeUrl} target="_blank">
-                <a target="_blank">Code</a>
-              </Link>
-            </button>
+            <Link href={projectData.codeUrl} target="_blank">
+              <a target="_blank">
+                <button className="px-8 py-2 mt-4">Code</button>
+              </a>
+            </Link>
           )}
         </div>
         <div className="col-span-4 md:col-span-1 shadow-md shadow-black rounded-xl p-4">

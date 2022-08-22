@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { AiOutlineClose, AiOutlineMenu, AiOutlineMail } from 'react-icons/ai';
+import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import ContactIcons from './ContactIcons';

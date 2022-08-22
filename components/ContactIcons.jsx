@@ -35,14 +35,13 @@ const ContactIcons = ({ size = 'normal' }) => {
   return (
     <>
       {iconList.map((icon) => (
-        <div
-          key={icon.name}
-          className="rounded-full cursor-pointer ease-in duration-300 hover:scale-105 p-3 shadow-md shadow-black"
-        >
-          <Link href={icon.url}>
-            <a target={icon.internal ? '' : '_blank'}>{icon.icon}</a>
-          </Link>
-        </div>
+        <Link key={icon.name} href={icon.url}>
+          <a target={icon.internal ? '' : '_blank'}>
+            <div className="rounded-full cursor-pointer ease-in duration-300 hover:scale-105 p-3 shadow-md shadow-black">
+              {icon.icon}
+            </div>
+          </a>
+        </Link>
       ))}
     </>
   );

@@ -3,7 +3,7 @@
     "id": "perfi",
     "imageName": "perfi.jpg",
     "name": "Perfi - Personal Finance",
-    "type": "React JS",
+    "type": "React JS / Express JS",
     "subTitle": "React JS / Express JS",
     "description": {
       "overview": [
@@ -58,7 +58,7 @@
     "imageName": "portfolio.jpg",
     "name": "Personal Portfolio",
     "type": "Next JS",
-    "subTitle": "Next JS / React JS",
+    "subTitle": "Next JS",
     "description": {
       "overview": ["This is the site you're currently browsing :)"],
       "features": [
@@ -76,8 +76,31 @@
       ]
     },
     "codeUrl": "https://github.com/Mirthis/portfolio",
-    "technologies": ["NextJs", "Tailwind CSS"],
+    "technologies": ["Next JS", "Tailwind CSS"],
     "imgWidth": 1292,
     "imgHeight": 929
+  },
+  {
+    "id": "cryptoverse",
+    "imageName": "cryptoverse.jpg",
+    "name": "Cryptoverse",
+    "type": "React JS",
+    "subTitle": "React JS",
+    "description": {
+      "overview": [
+        "Basic app leveraging CoinRanking API via RapidApi to retreive crypto currencies data and news."
+      ],
+      "features": [
+        "Crypto Market stats",
+        "List of top cryptos by market cap",
+        "Latest crypto news",
+        "Detailed page for each crypo with price history chart, stats, links and news"
+      ]
+    },
+    "codeUrl": "https://github.com/Mirthis/cryptoverse-webapp",
+    "demoUrl": "https://cryptoverse-mirthis.netlify.app/",
+    "technologies": ["React JS", "RTK Query", "Ant Design"],
+    "imgWidth": 1559,
+    "imgHeight": 1080
   }
 ]
