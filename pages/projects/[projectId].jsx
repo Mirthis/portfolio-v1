@@ -70,10 +70,10 @@ const Project = ({ projectData }) => {
         </div>
         <div className="col-span-4 md:col-span-1 shadow-md shadow-black rounded-xl p-4">
           <div className="p-2">
-            <p className="text-center font-bold pb-2">Technologies</p>
+            <p className="font-bold pb-2 text-sky-400">Technologies</p>
             <div className="grid grid-cols-3 md:grid-cols-1">
               {projectData.technologies.map((tech) => (
-                <p key={tech} className="text-gray-600 py-2 flex items-center">
+                <p key={tech} className="text-sky-400 py-2 flex items-center">
                   <RiRadioButtonFill className="pr-1" /> {tech}
                 </p>
               ))}

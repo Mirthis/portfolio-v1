@@ -3,7 +3,7 @@
     "id": "perfi",
     "imageName": "perfi.jpg",
     "name": "Perfi - Personal Finance",
-    "type": "React JS / Express JS",
+    "type": "Full-stack",
     "subTitle": "React JS / Express JS",
     "description": {
       "overview": [
@@ -54,11 +54,52 @@
     "imgHeight": 1080
   },
   {
+    "id": "poknfts",
+    "imageName": "pok.jpg",
+    "name": "POK NFts",
+    "type": "Front-end / Web3",
+    "subTitle": "Next JS / Tailwind CSS",
+    "description": {
+      "overview": [
+        "This simple web app allows to browse Proof of Knowlege NFTs and display the one owned by the user based on their wallet address."
+      ],
+      "features": [
+        "Web3 wallet connection",
+        "Browse user owned NFTs, based on connected wallet, for the supported collections",
+        "Browse all the NFTs for the supported collections",
+        "NFT details for each token",
+        "Basic pagination",
+        "Media playback for video NFTs"
+      ],
+      "techFeatures": [
+        "JavaScript / TypeScript - main coding language",
+        "Next JS / React JS - Web-app framework",
+        "Tailwind CSS - styling",
+        "Rainboww Kit / WAGMI - wallet connection",
+        "Alchemy-SDK - NFT retrieval",
+        "Vercel - Hosting"
+      ]
+    },
+    "demoUrl": "https://pok-nfts.vercel.app/",
+    "codeUrl": "https://github.com/Mirthis/pok-nfts",
+    "technologies": [
+      "Typescript",
+      "Next JS",
+      "React JS",
+      "Tailwind CSS",
+      "Alchemy SDK",
+      "Rainbow Kit",
+      "Wagmi"
+    ],
+    "imgWidth": 1507,
+    "imgHeight": 1080
+  },
+  {
     "id": "portfolio",
     "imageName": "portfolio.jpg",
     "name": "Personal Portfolio",
-    "type": "Next JS",
-    "subTitle": "Next JS",
+    "type": "Front-end",
+    "subTitle": "Next JS / Tailwind CSS",
     "description": {
       "overview": ["This is the site you're currently browsing :)"],
       "features": [
@@ -84,7 +125,7 @@
     "id": "cryptoverse",
     "imageName": "cryptoverse.jpg",
     "name": "Cryptoverse",
-    "type": "React JS",
+    "type": "Front-end",
     "subTitle": "React JS",
     "description": {
       "overview": [

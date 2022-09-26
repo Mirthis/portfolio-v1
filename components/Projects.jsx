@@ -11,7 +11,7 @@ export const Projects = () => {
 
   return (
     <div id="projects" className="w-full">
-      <div className="max-w-[1240px] mx-auto px-2 py-16">
+      <div className="max-w-[1240px] mx-auto px-2 pt-20 pb-16">
         <SectionHeader title="Projects" tagline="What I have built" />
         <div className="grid md:grid-cols-2 gap-8">
           {projects.map((p) => (

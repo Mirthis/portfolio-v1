@@ -10,7 +10,7 @@ import ContactForm from './ContactForm';
 const Contact = () => {
   return (
     <div id="contact" className="w-full lg:h-screen">
-      <div className="max-w-[1240px] m-auto px-2 py-16 w-full">
+      <div className="max-w-[1240px] m-auto px-2 pt-20 pb-16 w-full">
         <SectionHeader title="Contact" tagline="Get in Touch" />
         <div className="grid lg:grid-cols-5 gap-8">
           {/* left */}
