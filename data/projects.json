@@ -39,7 +39,7 @@
         "Styling and UI components from Material-UI"
       ]
     },
-    "demoUrl": "https://perfi-app.herokuapp.com/",
+    "demoUrl": "https://perfi-app.onrender.com",
     "codeUrl": "https://github.com/Mirthis/perfi",
     "technologies": [
       "Typescript",
