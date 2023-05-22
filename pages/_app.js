@@ -5,10 +5,9 @@ import '../styles/globals.css';
 function MyApp({ Component, pageProps }) {
   return (
     <>
+      <GoogleAnalytics trackPageViews />
       <Navbar />
-      <GoogleAnalytics trackPageViews>
-        <Component {...pageProps} />
-      </GoogleAnalytics>
+      <Component {...pageProps} />
     </>
   );
 }
