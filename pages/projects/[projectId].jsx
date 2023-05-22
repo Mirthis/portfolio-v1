@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import React from 'react';
-import { RiRadioButtonFill } from 'react-icons/ri';
+import { RiRadioButtonFill, RiGithubFill } from 'react-icons/ri';
+import { CgWebsite } from 'react-icons/cg';
 import Link from 'next/link';
 import { getProjectData, getProjectsIdList } from '../../utils/data';
 import { PROJECT_IMAGE_PATH } from '../../utils/constants';
@@ -53,20 +54,28 @@ const Project = ({ projectData }) => {
               </ul>
             </>
           )}
-          {projectData.demoUrl && (
-            <Link href={projectData.demoUrl}>
-              <a target="_blank">
-                <button className="px-8 py-2 mt-4 mr-8">Demo</button>
-              </a>
-            </Link>
-          )}
-          {projectData.codeUrl && (
-            <Link href={projectData.codeUrl} target="_blank">
-              <a target="_blank">
-                <button className="px-8 py-2 mt-4">Code</button>
-              </a>
-            </Link>
-          )}
+          <div className="flex gap-x-2 mt-4">
+            {projectData.demoUrl && (
+              <Link href={projectData.demoUrl}>
+                <a target="_blank">
+                  <button className="px-8 py-2 flex gap-x-2 items-center w-40">
+                    <CgWebsite className="w-5 h-5" />
+                    Website
+                  </button>
+                </a>
+              </Link>
+            )}
+            {projectData.codeUrl && (
+              <Link href={projectData.codeUrl} target="_blank">
+                <a target="_blank">
+                  <button className="px-8 py-2 flex gap-x-2 items-center w-40">
+                    <RiGithubFill className="w-5 h-5" />
+                    Code
+                  </button>
+                </a>
+              </Link>
+            )}
+          </div>
         </div>
         <div className="col-span-4 md:col-span-1 shadow-md shadow-black rounded-xl p-4">
           <div className="p-2">

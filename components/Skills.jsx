@@ -7,21 +7,21 @@ export const Skills = () => {
       <div className="max-w-[1240px] mx-auto flex flex-col justify-center h-full">
         <SectionHeader title="Skills" tagline="What I can do" />
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <SkillItem skillName="React" />
+          <SkillItem skillName="NextJS" />
+          <SkillItem skillName="Tailwind" />
+          <SkillItem skillName="Node" />
+          <SkillItem skillName="Typescript" />
+          <SkillItem skillName="GraphQL" />
+          <SkillItem skillName="PostgreSQL" />
+          <SkillItem skillName="Prisma" />
+          <SkillItem skillName="T3 Stack" />
           <SkillItem skillName="HTML" />
           <SkillItem skillName="CSS" />
           <SkillItem skillName="Javascript" />
-          <SkillItem skillName="Typescript" />
-          <SkillItem skillName="React" />
-          <SkillItem skillName="NextJS" />
-          <SkillItem skillName="Node" />
-          <SkillItem skillName="Tailwind" />
           <SkillItem skillName="Material-UI" />
-          <SkillItem skillName="PostgreSQL" />
-          <SkillItem skillName="MongoDB" />
-          <SkillItem skillName="GraphQL" />
           <SkillItem skillName="Solidity" />
           <SkillItem skillName="Hardhat" />
-          <SkillItem skillName="Docker" />
           <SkillItem skillName="Github" />
         </div>
       </div>

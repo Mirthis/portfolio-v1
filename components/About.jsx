@@ -22,11 +22,7 @@ export const About = () => {
             I have now descided to take this more seriously and try to turn an
             enjoyable pass-time into a job I can be passionate about.
           </p>
-          <p className="py-2">
-            Most recently I have been learning as much as I can about blockchain
-            and web3 development while getting involved with some commnuity
-            driven projects.
-          </p>
+
           <Link href="/#projects">
             <p className="py-2  underline cursor-pointer">
               Check out some of my latest projects.

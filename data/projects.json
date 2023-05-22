@@ -1,5 +1,91 @@
 [
   {
+    "id": "smartapply",
+    "imageName": "smartapply.webp",
+    "name": "Smart Apply",
+    "type": "Full-stack",
+    "subTitle": "Next JS / OpenAI",
+    "description": {
+      "overview": [
+        "AI powered tools to help with job applications: personalized cover letters, interview simulation and multiple choice questions to help you land your dream job."
+      ],
+      "features": [
+        "Generate cover letters based on job and applicant details",
+        "Refine the generated cover letter via free text inputs",
+        "Job interview with the chat bot and choice between HR and technical interview",
+        "Multiple choice questions to test knowledge of skills required for the job",
+        "User authentication via LinkedIn, Google or Email (magic link)",
+        "Save personal details in profile to be used for future job applications"
+      ],
+      "techFeatures": [
+        "Authentication using Clerk",
+        "Styling using Tailwind CSS",
+        "OpenAI API integration, including response streaming",
+        "Database integration using Prisma",
+        "End to end typesafety using TypeScript and TRPC",
+        "Deployment on Vercel"
+      ]
+    },
+    "demoUrl": "https://www.smartapply.app/",
+    "technologies": [
+      "T3 Stack",
+      "Next JS",
+      "React JS",
+      "Typescript",
+      "Prisma",
+      "Tailwind CSS",
+      "Clerk",
+      "OpenAI",
+      "TRPC",
+      "PostgreSQL"
+    ],
+    "imgWidth": 1217,
+    "imgHeight": 872
+  },
+  {
+    "id": "clai",
+    "imageName": "coverLettersAi.jpg",
+    "name": "Cover Letters AI",
+    "type": "Full-stack",
+    "subTitle": "Next JS / T3 Stack",
+    "description": {
+      "overview": [
+        "Simple application to generate cover letters based on a user profile and a job description. Powered by OpenAI's GPT-3 API."
+      ],
+      "features": [
+        "Instantly generate a cover letter based on job title and job description",
+        "Optional company details and applicant experience are used to personalize the output",
+        "User authentication via Twitter and Google",
+        "Browse previously generated letters",
+        "Save personal details in profile to be used in future letters"
+      ],
+      "techFeatures": [
+        "Authentication using NextAuth",
+        "Styling using Tailwind CSS",
+        "OpenAI API integration",
+        "Database integration using Prisma",
+        "End to end typesafety using TypeScript and TRPC",
+        "Deployment on Vercel"
+      ]
+    },
+    "demoUrl": "https://coverletterai.vercel.app/",
+    "codeUrl": "https://github.com/Mirthis/coverletterai",
+    "technologies": [
+      "T3 Stack",
+      "Next JS",
+      "React JS",
+      "Typescript",
+      "Prisma",
+      "Tailwind CSS",
+      "NextAuth",
+      "OpenAI",
+      "TRPC",
+      "PostgreSQL"
+    ],
+    "imgWidth": 1217,
+    "imgHeight": 872
+  },
+  {
     "id": "perfi",
     "imageName": "perfi.jpg",
     "name": "Perfi - Personal Finance",
@@ -53,49 +139,7 @@
     "imgWidth": 1507,
     "imgHeight": 1080
   },
-  {
-    "id": "clai",
-    "imageName": "coverLettersAi.jpg",
-    "name": "Cover Letters AI",
-    "type": "Full-stack",
-    "subTitle": "Next JS / Tailwind CSS",
-    "description": {
-      "overview": [
-        "Simple application to generate cover letters based on a user profile and a job description. Powered by OpenAI's GPT-3 API."
-      ],
-      "features": [
-        "Instantly generate a cover letter based on job title and job description",
-        "Optional company details and applicant experience are used to personalize the output",
-        "User authentication via Twitter and Google",
-        "Browse previously generated letters",
-        "Save personal details in profile to be used in future letters"
-      ],
-      "techFeatures": [
-        "Authentication using NextAuth",
-        "Styling using Tailwind CSS",
-        "OpenAI API integration",
-        "Database integration using Prisma",
-        "End to end typesafety using TypeScript and TRPC",
-        "Deployment on Vercel"
-      ]
-    },
-    "demoUrl": "https://coverletterai.vercel.app/",
-    "codeUrl": "https://github.com/Mirthis/coverletterai",
-    "technologies": [
-      "T3 Stack",
-      "Next JS",
-      "React JS",
-      "Typescript",
-      "Prisma",
-      "Tailwind CSS",
-      "NextAuth",
-      "OpenAI",
-      "TRPC",
-      "PostgreSQL"
-    ],
-    "imgWidth": 1217,
-    "imgHeight": 872
-  },
+
   {
     "id": "poknfts",
     "imageName": "pok.jpg",
