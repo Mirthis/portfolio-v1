@@ -8,7 +8,6 @@ import { MoonIcon, SunIcon } from "./Icons";
 
 const ThemeSwitcher = () => {
   const { setTheme, theme } = useTheme();
-  console.log({ theme });
 
   return (
     <button

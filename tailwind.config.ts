@@ -15,7 +15,7 @@ const config: Config = {
         mont: ["var(--font-mont)", ...fontFamily.sans],
       },
       colors: {
-        dark: "#380008",
+        dark: "#121212",
         light: "#f5f5f5",
         primary: "#16a34a", // 240,86,199
         primaryDark: "#eab308", // 80,230,217
@@ -28,25 +28,25 @@ const config: Config = {
           "repeating-radial-gradient(rgba(0,0,0,0.4) 2px,#f5f5f5 5px,#f5f5f5 100px)",
 
         circularDark:
-          "repeating-radial-gradient(rgba(255,255,255,0.5) 2px,#380008 8px,#380008 100px)",
+          "repeating-radial-gradient(rgba(255,255,255,0.5) 2px,#121212 8px,#121212 100px)",
 
         circularLightLg:
           "repeating-radial-gradient(rgba(0,0,0,0.4) 2px,#f5f5f5 5px,#f5f5f5 80px)",
 
         circularDarkLg:
-          "repeating-radial-gradient(rgba(255,255,255,0.5) 2px,#380008 8px,#380008 80px)",
+          "repeating-radial-gradient(rgba(255,255,255,0.5) 2px,#121212 8px,#121212 80px)",
 
         circularLightMd:
           "repeating-radial-gradient(rgba(0,0,0,0.4) 2px,#f5f5f5 5px,#f5f5f5 60px)",
 
         circularDarkMd:
-          "repeating-radial-gradient(rgba(255,255,255,0.5) 2px,#380008 8px,#380008 60px)",
+          "repeating-radial-gradient(rgba(255,255,255,0.5) 2px,#121212 6px,#121212 60px)",
 
         circularLightSm:
           "repeating-radial-gradient(rgba(0,0,0,0.4) 2px,#f5f5f5 5px,#f5f5f5 40px)",
 
         circularDarkSm:
-          "repeating-radial-gradient(rgba(255,255,255,0.5) 2px,#380008 8px,#380008 40px)",
+          "repeating-radial-gradient(rgba(255,255,255,0.5) 2px,#121212 4px,#121212 40px)",
       },
     },
     screens: {
