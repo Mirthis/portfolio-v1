@@ -203,7 +203,7 @@
         "Client and server side recaptcha validation"
       ]
     },
-    "codeUrl": "https://github.com/Mirthis/portfolio",
+    "codeUrl": "https://github.com/Mirthis/portfolio-v1",
     "technologies": ["Next JS", "Tailwind CSS"],
     "imgWidth": 1292,
     "imgHeight": 929
