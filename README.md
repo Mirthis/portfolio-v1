@@ -1,5 +1,7 @@
 # Portfolio
 
-Find the live version of my portfolio site at [htttps://andreacardinale.me](htttps://andreacardinale.me).
+Visit the [live version ](portfolio-v1-six-rose.vercel.app).
 
-The site is built with NextJS and Tailwind and provide an overview of my skills, expertise and project I have built.
+## New portfolio version
+
+Find the current version [here](https://github.com/Mirthis/portfolio).
